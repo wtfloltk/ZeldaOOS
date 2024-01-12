@@ -55,7 +55,7 @@ void Sprite::drawPositionedFrame(s16 x, s16 y, u8 anim, u8 frame) {
 	for (u8 i = 0;i<=m_animations.size()-1;i++){
 		newer = i;
 		try{
-		    newer = m_animations[i];
+		    printf("test if null" + m_animations[i]);
 		}
 		catch (Exception e){
 		    newer = -1;

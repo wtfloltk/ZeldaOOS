@@ -30,10 +30,9 @@ struct SpriteAnimation {
 	Timer timer;
 	bool isPlaying;
 	s16 (*position)[2];
+	char* ToString() {
+		return "u16 _size, u8 *_tabAnim, u16 _delay, s16 _position[][2]" + this.size + " " + this.tabAnim + " " + this.delay + " " + this.timer + " " + this.isPlaying + " " + this.position[0] + "," + this.position[1];
+	}	
 };
-
-char* ToString() {
-	return "u16 _size, u8 *_tabAnim, u16 _delay, s16 _position[][2]" + this.size + " " + this.tabAnim + " " + this.delay + " " + this.timer + " " + this.isPlaying + " " + this.position[0] + "," + this.position[1];
-}
 
 #endif // SPRITEANIMATION_HPP_

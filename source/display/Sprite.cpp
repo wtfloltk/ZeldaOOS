@@ -49,8 +49,24 @@ void Sprite::drawFrame(s16 x, s16 y, u8 frame) {
 void Sprite::drawPositionedFrame(s16 x, s16 y, u8 anim, u8 frame) {
 	s16 ox = 0;
 	s16 oy = 0;
+	bit oof = -1;
+	u8 prev = -1, newer = -1;
 
-	if (m_animations[anim] != NULL) {
+	for (i = 0;i<=m_animations.size;i++){
+		newer = i;
+		try{
+		    newer = m_animations[i];
+		}
+		catch (Exception e){
+		    newer = -1;
+		}
+		switch(newer){ 
+		  case -1: oof=-1; break;
+		  default: oof=0; break;
+		}
+		prev = newer;
+	}
+	if (!oof) {
 			
 		if(m_animations[anim].position && m_animations[anim].position[frame]) {
 			ox = m_animations[anim].position[frame][0];

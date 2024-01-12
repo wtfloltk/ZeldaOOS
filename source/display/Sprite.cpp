@@ -114,3 +114,8 @@ void Sprite::playAnimation(s16 x, s16 y, u8 anim) {
 	drawPositionedFrame(x, y, anim, getAnimationFrame(anim));
 }
 
+char* ToString() {
+	return "u8 screen, u8 id, s5_dimension size, u8 baseTile, u16 tileSize, u16 nbTiles, u8 paletteSlot, const void *tilesData, const void *palData\n" + m_screen + " " + m_id + " " +
+		m_size;
+}
+

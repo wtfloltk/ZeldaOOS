@@ -50,25 +50,14 @@ void Sprite::drawPositionedFrame(s16 x, s16 y, u8 anim, u8 frame) {
 	s16 ox = 0;
 	s16 oy = 0;
 	bool oof = -1;
-	u8 prev = -1, newer = -1;
 
-	try (printf("test start" + m_animations[anim]){
-		newer = anim;
-		try{
-		    printf("test if null" + m_animations[i]);
-		}
-		catch (Exception e){
-		    newer = -1;
-		}
-		switch(newer){ 
-		  case -1: oof=1; break;
-		  default: oof=0; break;
-		}
-		prev = newer;
+	try {
+		printf("test start" + m_animations[anim])
 	}
 	catch (Exception e){
 	    oof=1;
 	}
+	
 	if (!oof) {
 			
 		if(m_animations[anim].position && m_animations[anim].position[frame]) {

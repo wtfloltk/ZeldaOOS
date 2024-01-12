@@ -32,4 +32,8 @@ struct SpriteAnimation {
 	s16 (*position)[2];
 };
 
+char* ToString() {
+	return "u16 _size, u8 *_tabAnim, u16 _delay, s16 _position[][2]" + size + " " + tabAnim + " " + delay + " " + timer + " " + isPlaying + " " + position[0] + "," + position[1];
+}
+
 #endif // SPRITEANIMATION_HPP_

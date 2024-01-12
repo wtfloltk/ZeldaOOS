@@ -52,7 +52,7 @@ void Sprite::drawPositionedFrame(s16 x, s16 y, u8 anim, u8 frame) {
 	bool oof = -1;
 	u8 prev = -1, newer = -1;
 
-	for (i = 0;i<=m_animations.size;i++){
+	for (u8 i = 0;i<=m_animations.size;i++){
 		newer = i;
 		try{
 		    newer = m_animations[i];

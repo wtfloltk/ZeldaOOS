@@ -49,13 +49,16 @@ void Sprite::drawFrame(s16 x, s16 y, u8 frame) {
 void Sprite::drawPositionedFrame(s16 x, s16 y, u8 anim, u8 frame) {
 	s16 ox = 0;
 	s16 oy = 0;
-	
-	if(m_animations[anim].position && m_animations[anim].position[frame]) {
-		ox = m_animations[anim].position[frame][0];
-		oy = m_animations[anim].position[frame][1];
+
+	if (m_animations[anim] != NULL) {
+			
+		if(m_animations[anim].position && m_animations[anim].position[frame]) {
+			ox = m_animations[anim].position[frame][0];
+			oy = m_animations[anim].position[frame][1];
+		}
+
+		drawFrame(x + ox, y + oy, m_animations[anim].tabAnim[frame]);
 	}
-	
-	drawFrame(x + ox, y + oy, m_animations[anim].tabAnim[frame]);
 }
 
 void Sprite::addAnimation(u8 size, u8 *frames, u16 delay, s16 position[][2]) {

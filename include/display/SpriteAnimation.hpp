@@ -31,7 +31,7 @@ struct SpriteAnimation {
 	bool isPlaying;
 	s16 (*position)[2];
 	char* ToString() {
-		return ((char*)("u16 _size, u8 *_tabAnim, u16 _delay, s16 _position[][2]" + this->size + " " + this->tabAnim + " " + this->delay + " " + this->timer + " " + this->isPlaying + " " + this->position[0] + "," + this->position[1]));
+		return ((char*)("u16 _size, u8 *_tabAnim, u16 _delay, s16 _position[][2]\n" + (char*)this->size + " " + (char*)this->tabAnim + " " + (char*)this->delay + " " + (char*)this->timer + " " + (char*)this->isPlaying + " " + (char*)this->position[0] + "," + (char*)this->position[1]));
 	}	
 };
 

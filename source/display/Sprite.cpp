@@ -49,7 +49,7 @@ void Sprite::drawFrame(s16 x, s16 y, u8 frame) {
 void Sprite::drawPositionedFrame(s16 x, s16 y, u8 anim, u8 frame) {
 	s16 ox = 0;
 	s16 oy = 0;
-	bit oof = -1;
+	bool oof = -1;
 	u8 prev = -1, newer = -1;
 
 	for (i = 0;i<=m_animations.size;i++){

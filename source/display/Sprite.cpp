@@ -52,7 +52,7 @@ void Sprite::drawPositionedFrame(s16 x, s16 y, u8 anim, u8 frame) {
 	bool oof = -1;
 
 	try {
-		printf("test start" + m_animations[anim])
+		printf("test start" + m_animations[anim].toString())
 	}
 	catch (Exception e){
 	    oof=1;
